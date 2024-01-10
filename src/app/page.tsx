@@ -22,7 +22,7 @@ export default function Home() {
   );
 
   return (
-    <main className="mx-auto mt-16 sm:mt-32 max-w-2xl lg:max-w-2xl xl:max-w-5xl">
+    <main className="mx-auto mt-16 sm:mt-32 max-w-2xl lg:max-w-3xl">
       <div className="w-[60px] mx-6 sm:mx-0">
         <Image src="/profile.jpg" alt="Profile Picture" width="60" height="60" className="rounded-full shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5" />
       </div>

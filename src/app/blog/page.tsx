@@ -1,4 +1,4 @@
-import Brief from "@/components/brief";
+import Brief from '@/components/brief';
 
 export default function Blog() {
   const headingContent = (
@@ -9,7 +9,7 @@ export default function Blog() {
   const paragraphContent = <>The blog page.</>;
 
   return (
-    <main className="mx-auto mt-16 sm:mt-32 max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+    <main className="mx-auto mt-16 sm:mt-32 max-w-2xl lg:max-w-3xl">
       <Brief heading={headingContent} paragraph={paragraphContent} />
     </main>
   );

@@ -1,4 +1,9 @@
 import Brief from '@/components/brief';
+import Link from 'next/link';
+import { socials } from '@/lib/data';
+
+import { FaLinkedin } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa6';
 
 export default function About() {
   const headingContent = (
@@ -8,17 +13,29 @@ export default function About() {
   );
   const paragraphContent = (
     <>
-      I&apos;m a junior currently attending <span className="font-semibold">CUNY Hunter College</span>. I&apos;m pursuing a Bachelor&apos;s Degree in Computer Science, with a Minor in Mathematics. My interests in the field is <span className="font-semibold">software development</span> and <span className="font-semibold">full-stack development</span>. 🎓
+      I&apos;m currently a junior attending <span className="font-semibold">CUNY Hunter College</span>. I&apos;m pursuing a Bachelor&apos;s Degree in Computer Science, with a Minor in Mathematics. My interests in the field includes <span className="font-semibold">software development</span> and <span className="font-semibold">full-stack development</span>. 🎓
       <br />
-      <br /> I bring strong <span className="font-semibold">problem-solving skills</span>, <span className="font-semibold">attention to detail</span>, and a <span className="font-semibold">positive attitude</span> to every project. Excited to connect with professionals, learn from experienced mentors, and take the next step in my software engineering career. 💼
+      <br /> I bring strong <span className="font-semibold">problem-solving skills</span>, <span className="font-semibold">attention to detail</span>, and a <span className="font-semibold">positive attitude</span> to every project. I am eager to connect with professionals, learn from experienced mentors, and advance my software engineering career. 💼
       <br />
-      <br /> Some of my favorite hobbies are: motorsports, gym, and gaming. 🏎️
+      <br /> Some of my hobbies include motorsports, working out at the gym, and gaming in my free time. 🏎️
+      <br />
+      <br />
     </>
   );
 
   return (
-    <main className="mx-auto mt-16 sm:mt-32 max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+    <main className="mx-auto mt-16 mb-16 sm:mt-32 max-w-2xl lg:max-w-3xl">
       <Brief heading={headingContent} paragraph={paragraphContent} />
+      <div className="mx-6 sm:mx-auto h-[2px] w-full bg-zinc-800/25" />
+      <p className="text-base text-zinc-700 mt-6">Feel free to reach out to me with any inquiries or collaboration possibilities. I&apos;m eager to connect and explore opportunities!</p>
+      <div className="mt-6 flex gap-6 mx-6 sm:mx-0">
+        <Link href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="h-7 w-7 justify-between items-center text-[#0A66C2]" />
+        </Link>
+        <Link href={socials.github} target="_blank" rel="noopener noreferrer">
+          <FaGithub className="h-7 w-7 justify-between items-center text-black" />
+        </Link>
+      </div>
     </main>
   );
 }
