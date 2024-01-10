@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { socials } from '@/lib/data';
+import Link from "next/link";
+import Image from "next/image";
+import { socials } from "@/lib/data";
 
-import Brief from '@/components/brief';
-import { FaFilePdf } from 'react-icons/fa6';
-import { TbMessageCircle2Filled } from 'react-icons/tb';
+import Brief from "@/components/brief";
+import { FaFilePdf } from "react-icons/fa6";
+import { TbMessageCircle2Filled } from "react-icons/tb";
 
 export default function Home() {
   const headingContent = (
@@ -30,14 +30,14 @@ export default function Home() {
       <Brief heading={headingContent} paragraph={paragraphContent} />
       <br />
       <div className="flex mx-6 sm:mx-0 gap-4">
-        <Link href={'/Steven_Sikorski_Resume.pdf'} target="_blank" rel="noopener noreferrer">
-          <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-white/90 pl-4 pr-4 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5">
+        <Link href={"/Steven_Sikorski_Resume.pdf"} target="_blank" rel="noopener noreferrer">
+          <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-white/90 pl-4 pr-4 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5 hover:text-blue-700">
             <FaFilePdf className="h-4 w-4" />
             <p>Resume</p>
           </button>
         </Link>
-        <Link href={'/contact'}>
-          <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-white/90 pl-4 pr-4 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5">
+        <Link href={"/contact"}>
+          <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-white/90 pl-4 pr-4 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5 hover:text-blue-700">
             <TbMessageCircle2Filled className="h-4 w-4" />
             <p>Contact</p>
           </button>

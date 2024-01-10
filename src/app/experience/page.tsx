@@ -1,4 +1,4 @@
-import Brief from '@/components/brief';
+import Brief from "@/components/brief";
 
 export default function Experience() {
   const headingContent = (

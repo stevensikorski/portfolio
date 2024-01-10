@@ -1,9 +1,9 @@
-import Brief from '@/components/brief';
-import Link from 'next/link';
-import { socials } from '@/lib/data';
+import Brief from "@/components/brief";
+import Link from "next/link";
+import { socials } from "@/lib/data";
 
-import { FaLinkedin } from 'react-icons/fa6';
-import { FaGithub } from 'react-icons/fa6';
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 export default function About() {
   const headingContent = (
@@ -24,16 +24,30 @@ export default function About() {
   );
 
   return (
-    <main className="mx-auto mt-16 mb-16 sm:mt-32 max-w-2xl lg:max-w-3xl">
+    <main className="mx-auto mt-16 sm:mt-32 mb-16 sm:mb-0 max-w-2xl lg:max-w-3xl">
       <Brief heading={headingContent} paragraph={paragraphContent} />
-      <div className="mx-6 sm:mx-auto h-[2px] w-full bg-zinc-800/25" />
-      <p className="text-base text-zinc-700 mt-6">Feel free to reach out to me with any inquiries or collaboration possibilities. I&apos;m eager to connect and explore opportunities!</p>
-      <div className="mt-6 flex gap-6 mx-6 sm:mx-0">
+      <div className="mx-6 sm:mx-0 h-[2px] w-full bg-zinc-800/25" />
+      <p className="mx-6 sm:mx-0 mt-6 text-base text-zinc-700">Feel free to reach out to me with any inquiries or collaboration possibilities. I&apos;m eager to connect and explore opportunities!</p>
+      {/* <div className="mt-6 flex gap-6 mx-6 sm:mx-0">
         <Link href={socials.linkedin} target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="h-7 w-7 justify-between items-center text-[#0A66C2]" />
         </Link>
         <Link href={socials.github} target="_blank" rel="noopener noreferrer">
           <FaGithub className="h-7 w-7 justify-between items-center text-black" />
+        </Link>
+      </div> */}
+      <div className="flex mx-6 sm:mx-0 gap-4 mt-6">
+        <Link href={"/Steven_Sikorski_Resume.pdf"} target="_blank" rel="noopener noreferrer">
+          <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-white/90 px-4 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5 hover:text-blue-700">
+            <FaLinkedinIn className="h-4 w-4" />
+            <p>LinkedIn</p>
+          </button>
+        </Link>
+        <Link href={"/contact"}>
+          <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-white/90 px-5 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5 hover:text-blue-700">
+            <FaGithub className="h-4 w-4" />
+            <p>GitHub</p>
+          </button>
         </Link>
       </div>
     </main>
