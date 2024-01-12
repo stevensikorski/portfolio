@@ -9,7 +9,7 @@ export default function Blog() {
   const paragraphContent = <>The blog page.</>;
 
   return (
-    <main className="mx-auto mt-16 sm:mt-32 max-w-2xl lg:max-w-3xl">
+    <main className="mx-auto my-16 sm:my-20 max-w-2xl lg:max-w-3xl">
       <Brief heading={headingContent} paragraph={paragraphContent} />
     </main>
   );

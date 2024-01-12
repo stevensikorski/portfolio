@@ -21,7 +21,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-50 relative">
+    <header className="z-50 relative flex">
       <div className="h-16 pt-6 w-full flex justify-between items-center mx-6 sm:mx-auto max-w-2xl lg:max-w-3xl">
         <div className="w-10">
           <Link href={links[0].hash} className={clsx("", { hidden: path === "home" })}>
@@ -35,7 +35,7 @@ export default function Header() {
             .filter((link) => link.hidden === false)
             .map((link) => (
               <li key={link.hash}>
-                <Link href={link.hash} className={clsx("relative block px-3 py-2 transition duration-[250ms]", { "text-blue-700 font-semibold": path === link.name, "hover:text-blue-700": path !== link.name })}>
+                <Link href={link.hash} className={clsx("relative block px-3 py-2 transition duration-[250ms]", { "text-blue-700": path === link.name, "hover:text-blue-700": path !== link.name })}>
                   <p className="capitalize">{link.name}</p>
                   <motion.span initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: path === link.name ? 1 : 0, scaleX: path === link.name ? 1 : 0 }} className="absolute inset-x-1 -bottom-[2px] h-[2px] bg-gradient-to-r from-blue-700/0 via-blue-700/75 to-blue-700/0"></motion.span>
                 </Link>
