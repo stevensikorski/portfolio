@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa6";
 export default function About() {
   const headingContent = (
     <>
-      Hi, my name is <span className="text-blue-700">Steven Sikorski</span>. <span className="inline-block animate-wave">👋</span>
+      Hi, my name is <span className="text-blue-700">Steven Sikorski</span>. <span className="inline-block animate-wave">👋🏻</span>
     </>
   );
   const paragraphContent = (
@@ -26,13 +26,13 @@ export default function About() {
       <div className="mx-6 sm:mx-0 h-px bg-zinc-300" />
       <p className="mx-6 sm:mx-0 mt-6 text-base text-zinc-600">Feel free to reach out to me with any inquiries or collaboration possibilities. I&apos;m eager to meet new people and make connections!</p>
       <div className="flex justify-evenly sm:justify-start mx-6 sm:mx-0 gap-0 sm:gap-4 mt-6">
-        <Link href={"https://www.linkedin.com/in/stevensikorski/"} target="_blank" rel="noopener noreferrer">
+        <Link href={socials.linkedin} target="_blank" rel="noopener noreferrer">
           <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-blue-700 px-4 text-sm font-medium transition duration-[250ms] text-white shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5 sm:hover:bg-white/90 sm:hover:text-blue-700">
             <FaLinkedinIn className="h-4 w-4" />
             <p>LinkedIn</p>
           </button>
         </Link>
-        <Link href={"https://github.com/stevensikorski"} target="_blank" rel="noopener noreferrer">
+        <Link href={socials.github} target="_blank" rel="noopener noreferrer">
           <button className="h-9 w-28 sm:mx-0 flex justify-between items-center rounded-full bg-blue-700 px-5 text-sm font-medium transition duration-[250ms] text-white shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5 sm:hover:bg-white/90 sm:hover:text-blue-700">
             <FaGithub className="h-4 w-4" />
             <p>GitHub</p>

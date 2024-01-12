@@ -1,6 +1,7 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { socials } from "@/lib/data";
 
 import Brief from "@/components/brief";
 import { FaFilePdf } from "react-icons/fa6";

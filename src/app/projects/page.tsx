@@ -1,8 +1,11 @@
+"use client";
+
 import Brief from "@/components/brief";
 import Link from "next/link";
 import Image from "next/image";
 import { FaLink } from "react-icons/fa6";
 import { projects } from "@/lib/data";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const headingContent = (
@@ -20,7 +23,7 @@ export default function Projects() {
       <div className="mt-12 mx-6 sm:mx-auto">
         <ul role="list" className="w-full grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <li key={index} className="group relative flex flex-col items-start p-4">
+            <motion.li key={index} whileHover={{ scale: 1.05, rotate: [0, -1, 0, 1, 0], transition: { duration: 0.25 } }} className="group relative flex flex-col items-start p-4">
               <div className="z-0 -inset-x-0 -inset-y-0 absolute block bg-white rounded-2xl opacity-1 transition sm:group-hover:opacity-100 sm:group-hover:shadow-lg sm:group-hover:shadow-zinc-800/5"></div>
               <Link href={project.projectURL} target="_blank" rel="noreferrer noopener" className="z-10">
                 <Image src={project.image} alt="Profile Picture" width="40" height="40" className="rounded-md" />
@@ -31,7 +34,7 @@ export default function Projects() {
                   <span className="ml-2">{project.shortenedURL}</span>
                 </p>
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

@@ -69,7 +69,7 @@ export const projects = [
     shortenedURL: "github.io/ASLearn",
   },
   {
-    title: "Monte Carlo Algorithm to Estimate Pi",
+    title: "Monte Carlo Algorithm",
     description: "Estimation of the irrational number pi by utilizing the Monte Carlo Algorithm.",
     image: EstimatePiImg,
     projectURL: "https://github.com/stevensikorski/estimate-pi",
