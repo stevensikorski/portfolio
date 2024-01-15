@@ -1,10 +1,4 @@
 import React from "react";
-import PolishCulturalClubImg from "@/../public/PolishCulturalClub.png";
-import MazeSolverImg from "@/../public/MazeSolver.png";
-import PasswordGeneratorImg from "@/../public/PasswordGenerator.png";
-import ASLearnImg from "@/../public/ASLearn.png";
-import EstimatePiImg from "@/../public/EstimatePi.png";
-import SystemInfoImg from "@/../public/SystemInfo.png";
 
 export const links = [
   {
@@ -28,11 +22,6 @@ export const links = [
     hidden: false,
   },
   {
-    name: "blog",
-    hash: "/blog",
-    hidden: true,
-  },
-  {
     name: "contact",
     hash: "/contact",
     hidden: false,
@@ -41,46 +30,46 @@ export const links = [
 
 export const projects = [
   {
-    title: "Polish Cultural Club",
+    name: "Polish Cultural Club",
     description: "Currently involved in developing the website for the Polish Cultural Club.",
-    image: PolishCulturalClubImg,
-    projectURL: "https://hcpolishclub.com/",
-    shortenedURL: "hcpolishclub.org",
+    image: "PolishCulturalClub.png",
+    url: "https://hcpolishclub.org/",
+    link: "hcpolishclub.org",
   },
   {
-    title: "Maze Solver",
+    name: "Maze Solver",
     description: "Navigation program for mazes using depth first search.",
-    image: MazeSolverImg,
-    projectURL: "https://github.com/stevensikorski/maze-solver",
-    shortenedURL: "github.com/stevensikorski",
+    image: "MazeSolver.png",
+    url: "https://github.com/stevensikorski/maze-solver",
+    link: "github.com/stevensikorski",
   },
   {
-    title: "Password Generator",
+    name: "Password Generator",
     description: "Desktop application for password generation. Purpose-built for macOS.",
-    image: PasswordGeneratorImg,
-    projectURL: "https://github.com/stevensikorski/password-generator",
-    shortenedURL: "github.com/stevensikorski",
+    image: "PasswordGenerator.png",
+    url: "https://github.com/stevensikorski/password-generator",
+    link: "github.com/stevensikorski",
   },
   {
-    title: "ASLearn",
+    name: "ASLearn",
     description: "Hackathon project made with a team of four for HackNYU 2022.",
-    image: ASLearnImg,
-    projectURL: "https://arshs1.github.io/ASLearn/",
-    shortenedURL: "github.io/ASLearn",
+    image: "ASLearn.png",
+    url: "https://arshs1.github.io/ASLearn/",
+    link: "github.io/ASLearn",
   },
   {
-    title: "Monte Carlo Algorithm",
+    name: "Monte Carlo Algorithm",
     description: "Estimation of the irrational number pi by utilizing the Monte Carlo Algorithm.",
-    image: EstimatePiImg,
-    projectURL: "https://github.com/stevensikorski/estimate-pi",
-    shortenedURL: "github.com/stevensikorski",
+    image: "EstimatePi.png",
+    url: "https://github.com/stevensikorski/estimate-pi",
+    link: "github.com/stevensikorski",
   },
   {
-    title: "macos-system-info",
+    name: "macos-system-info",
     description: "Application to monitor system information on macOS based systems.",
-    image: SystemInfoImg,
-    projectURL: "https://github.com/stevensikorski/macos-system-info",
-    shortenedURL: "github.com/stevensikorski",
+    image: "SystemInfo.png",
+    url: "https://github.com/stevensikorski/macos-system-info",
+    link: "github.com/stevensikorski",
   },
 ] as const;
 
@@ -100,10 +89,6 @@ export const experiences = [
     date: "Jun. 2023 - Aug. 2023",
   },
 ] as const;
-
-export const blogs = [] as const;
-
-export const skills = [] as const;
 
 export const socials = {
   linkedin: "https://www.linkedin.com/in/stevensikorski/",

@@ -1,16 +1,15 @@
 "use client";
 
 import React from "react";
-import clsx from "clsx";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-
 import Image from "next/image";
 import Link from "next/link";
-import { MdMenu } from "react-icons/md";
-import { MdClose } from "react-icons/md";
+import clsx from "clsx";
+import { MdMenu, MdClose } from "react-icons/md";
+
+import { links } from "@/lib/data";
 
 export default function Header() {
   const path = usePathname().substring(1) || "home";
@@ -21,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-50 relative flex">
+    <motion.header initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.25 } }} className="z-50 relative flex">
       <div className="h-16 pt-6 w-full flex justify-between items-center mx-6 sm:mx-auto max-w-2xl lg:max-w-3xl">
         <div className="w-10">
           <Link href={links[0].hash} className={clsx("", { hidden: path === "home" })}>
@@ -68,6 +67,6 @@ export default function Header() {
           </nav>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
