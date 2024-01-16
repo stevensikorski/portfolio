@@ -29,7 +29,9 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
-  const recaptchaResponse = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${captcha}`);
+  const recaptchaResponse = await axios.post(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${captcha}`,
+  );
   if (!recaptchaResponse.data.success) {
     return {
       error: "reCAPTCHA verification failed.",
