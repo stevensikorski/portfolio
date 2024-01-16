@@ -48,7 +48,7 @@ export default function Home() {
       <br />
       <div className="flex justify-evenly sm:justify-start mx-6 sm:mx-0 gap-0 sm:gap-4">
         <Button
-          href="/Steven_Sikorski_Resume.pdf"
+          href="https://stevensikorski.com/Steven_Sikorski_Resume.pdf"
           icon={<FaFilePdf className="h-4 w-4" />}
           text="Resume"
         ></Button>
