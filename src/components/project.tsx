@@ -24,9 +24,9 @@ const Project: React.FC<ProjectProperties> = ({
       whileHover={{
         scale: 1.05,
         rotate: [0, -1, 0, 1, 0],
-        transition: { duration: 0.25 },
+        transition: { duration: 0 },
       }}
-      className="group relative flex flex-col items-start p-4"
+      className="group relative flex flex-col items-start p-4 motion-duration"
     >
       <div className="z-0 -inset-x-0 -inset-y-0 absolute block bg-white rounded-2xl opacity-1 transition duration-[250] sm:group-hover:opacity-100 ring-2 ring-zinc-800/5 sm:group-hover:shadow-lg sm:group-hover:shadow-zinc-800/5"></div>
       <Link

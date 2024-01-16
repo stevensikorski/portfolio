@@ -24,9 +24,9 @@ const Experience: React.FC<ExperienceProperties> = ({
         whileHover={{
           scale: 1.025,
           rotate: [0, -1, 0, 1, 0],
-          transition: { duration: 0.25 },
+          transition: { duration: 0 },
         }}
-        className="group relative flex flex-col items-start md:col-span-3 bg-white transition-shadow rounded-lg ring-2 ring-zinc-800/5 sm:hover:shadow-lg sm:hover:shadow-zinc-800/5 p-4"
+        className="group relative flex flex-col motion-duration items-start md:col-span-3 bg-white transition-shadow rounded-lg ring-2 ring-zinc-800/5 sm:hover:shadow-lg sm:hover:shadow-zinc-800/5 p-4"
       >
         <h2 className="text-base font-semibold tracking-tight text-zinc-800">
           {title}

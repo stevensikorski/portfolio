@@ -10,8 +10,8 @@ export default function ProjectsPage() {
   return (
     <motion.main
       initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.25 } }}
-      className="mx-auto my-16 sm:my-20 sm:mb-0 max-w-2xl lg:max-w-5xl"
+      animate={{ opacity: 1, x: 0, transition: { duration: 0 } }}
+      className="mx-auto my-16 sm:my-20 sm:mb-0 max-w-2xl lg:max-w-5xl motion-duration"
     >
       <div className="mx-auto max-w-2xl lg:max-w-3xl">
         <Brief

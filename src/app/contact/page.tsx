@@ -31,8 +31,8 @@ export default function ContactPage() {
   return (
     <motion.main
       initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.25 } }}
-      className="mx-auto my-16 sm:my-20 max-w-2xl lg:max-w-3xl"
+      animate={{ opacity: 1, x: 0, transition: { duration: 0 } }}
+      className="mx-auto my-16 sm:my-20 max-w-2xl lg:max-w-3xl motion-duration"
     >
       <Brief
         heading={
@@ -124,7 +124,7 @@ export default function ContactPage() {
         >
           <button
             type="submit"
-            className="h-9 w-28 flex justify-center items-center gap-2 rounded-full bg-blue-700 text-sm font-medium transition duration-[250ms] text-white sm:hover:shadow-lg sm:hover:shadow-zinc-800/5 ring-2 ring-zinc-800/5 sm:hover:bg-white/90 sm:hover:text-blue-700"
+            className="h-9 w-28 flex justify-center items-center gap-2 rounded-full bg-blue-700 text-sm font-medium transition motion-duration text-white sm:hover:shadow-lg sm:hover:shadow-zinc-800/5 ring-2 ring-zinc-800/5 sm:hover:bg-white/90 sm:hover:text-blue-700"
           >
             <FaPaperPlane className="h-4 w-4" />
             <p>Submit</p>

@@ -15,6 +15,7 @@ export default function Header() {
   const path = usePathname().substring(1) || "home";
 
   const [mobileHeader, setMobileHeader] = useState(false);
+
   const toggleMobile = () => {
     setMobileHeader(!mobileHeader);
   };
@@ -22,8 +23,8 @@ export default function Header() {
   return (
     <motion.header
       initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.25 } }}
-      className="z-50 relative flex"
+      animate={{ opacity: 1, y: 0, transition: { duration: 0 } }}
+      className="z-50 relative flex motion-duration"
     >
       <div className="h-16 pt-6 w-full flex justify-between items-center mx-6 sm:mx-auto max-w-2xl lg:max-w-3xl">
         <div className="w-10">
@@ -36,6 +37,7 @@ export default function Header() {
               alt="Profile Picture"
               width="40"
               height="40"
+              loading="lazy"
               className="rounded-full shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5"
             />
           </Link>
@@ -49,13 +51,10 @@ export default function Header() {
               <li key={link.hash}>
                 <Link
                   href={link.hash}
-                  className={clsx(
-                    "relative block px-3 py-2 transition duration-[250ms]",
-                    {
-                      "text-blue-700": path === link.name,
-                      "hover:text-blue-700": path !== link.name,
-                    },
-                  )}
+                  className={clsx("relative block px-3 py-2 transition", {
+                    "text-blue-700": path === link.name,
+                    "hover:text-blue-700": path !== link.name,
+                  })}
                 >
                   <p className="capitalize">{link.name}</p>
                   <motion.span
@@ -63,8 +62,9 @@ export default function Header() {
                     animate={{
                       opacity: path === link.name ? 1 : 0,
                       scaleX: path === link.name ? 1 : 0,
+                      transition: { duration: 0 },
                     }}
-                    className="absolute inset-x-1 -bottom-[2px] h-[2px] bg-gradient-to-r from-blue-700/0 via-blue-700/75 to-blue-700/0"
+                    className="absolute inset-x-1 -bottom-[2px] h-[2px] motion-duration bg-gradient-to-r from-blue-700/0 via-blue-700/75 to-blue-700/0"
                   ></motion.span>
                 </Link>
               </li>
@@ -77,13 +77,13 @@ export default function Header() {
               "pointer-events-none": mobileHeader === false,
             })}
           >
-            <div
-              className={clsx("w-full h-full duration-[250ms]", {
-                "translate-x-0": mobileHeader === true,
-                "translate-x-full": mobileHeader === false,
-              })}
+            <motion.div
+              className="w-full h-full motion-duration"
+              animate={{ x: mobileHeader ? 0 : "100%" }}
+              initial={{ x: mobileHeader ? 0 : "100%" }}
+              transition={{ duration: 0 }}
             >
-              <div className="absolute inset-0 right-0 bg-white border-l-2 border-zinc-800/5">
+              <div className="absolute inset-0 right-0 h-[200%] bg-white border-l-2 border-zinc-800/5">
                 <div className="w-full h-16 bg-white"></div>
               </div>
               <ul className="absolute grid w-full px-10 py-16">
@@ -100,7 +100,7 @@ export default function Header() {
                         href={link.hash}
                         onClick={() => setMobileHeader(false)}
                         className={clsx(
-                          "flex w-full text-xl font-semibold transition duration-[250ms]",
+                          "flex w-full text-xl font-semibold transition",
                           {
                             "text-blue-700": path === link.name,
                             "text-zinc-800": path !== link.name,
@@ -112,11 +112,11 @@ export default function Header() {
                     </li>
                   ))}
               </ul>
-            </div>
+            </motion.div>
             <button
               id="headerButton"
               onClick={toggleMobile}
-              className="absolute top-7 right-7 pointer-events-auto sm:hidden"
+              className="absolute top-6 right-6 p-1 pointer-events-auto sm:hidden"
             >
               <MdMenu
                 className={clsx(

@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <motion.main
       initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.25 } }}
-      className="mx-auto my-16 sm:my-48 max-w-2xl lg:max-w-3xl"
+      animate={{ opacity: 1, x: 0, transition: { duration: 0 } }}
+      className="mx-auto my-16 sm:my-48 max-w-2xl lg:max-w-3xl motion-duration"
     >
       <div className="w-[60px] mx-6 sm:mx-0">
         <Image
@@ -21,6 +21,7 @@ export default function Home() {
           alt="Profile Picture"
           width="60"
           height="60"
+          loading="lazy"
           className="rounded-full shadow-lg shadow-zinc-800/5 ring-2 ring-zinc-800/5"
         />
       </div>
