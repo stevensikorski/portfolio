@@ -110,7 +110,7 @@ export default function ContactPage() {
           className="h-48 text-sm rounded-lg p-4 ring-2 ring-zinc-800/5 focus:outline-none"
         ></textarea>
         <ReCAPTCHA
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
           onChange={setCaptcha}
           className="py-2"
         />
