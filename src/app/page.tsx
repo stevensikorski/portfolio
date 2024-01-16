@@ -39,9 +39,9 @@ export default function Home() {
             </span>
             <br />
             <br />
-            Welcome to my portfolio website, I guess you&apos;re here to learn a
-            thing or two about me! I&apos;m a passionate computer science
-            student looking to make it big in software engineering in the near
+            Welcome to my portfolio website! I assume you&apos;re here to learn
+            a thing or two about me. I&apos;m a passionate computer science
+            student looking to make a mark in software engineering in the near
             future.
           </>
         }

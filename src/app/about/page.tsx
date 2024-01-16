@@ -26,9 +26,9 @@ export default function AboutPage() {
           <>
             I&apos;m currently a junior attending{" "}
             <span className="font-semibold">CUNY Hunter College</span> in{" "}
-            <span className="font-semibold">New York City</span>. I&apos;m
-            pursuing a Bachelor&apos;s Degree in Computer Science, with a Minor
-            in Mathematics. My interests in the field includes{" "}
+            <span className="font-semibold">New York City</span>, pursuing a
+            Bachelor&apos;s Degree in Computer Science, with a Minor in
+            Mathematics. My interests in the field include{" "}
             <span className="font-semibold">software development</span> and{" "}
             <span className="font-semibold">full-stack development</span>. 🎓{" "}
             <br></br>
