@@ -2,47 +2,59 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type ExperienceProperties = {
   title: string;
   description: string;
+  image: string;
   organization: string;
-  location: string;
   date: string;
 };
 
-const Experience: React.FC<ExperienceProperties> = ({
+const ExperienceComponent: React.FC<ExperienceProperties> = ({
   title,
   description,
+  image,
   organization,
-  location,
   date,
 }) => {
   return (
-    <li className="md: grid md:grid-cols-4 md:items-baseline">
+    <li className="md:grid md:grid-cols-4">
+      <p className="relative flex items-start z-10 mt-5 mb-3 text-sm text-zinc-400">
+        {date}
+      </p>
       <motion.div
         whileHover={{
           scale: 1.025,
-          rotate: [0, -1, 0, 1, 0],
           transition: { duration: 0 },
         }}
-        className="group relative flex flex-col motion-duration items-start md:col-span-3 bg-white transition-shadow rounded-lg ring-2 ring-zinc-800/5 sm:hover:shadow-lg sm:hover:shadow-zinc-800/5 p-4"
+        className="relative flex flex-col motion-duration items-start md:col-span-3 bg-white transition-shadow rounded-lg ring-2 ring-zinc-800/5 sm:hover:shadow-lg sm:hover:shadow-zinc-800/5 p-4"
       >
-        <h2 className="text-base font-semibold tracking-tight text-zinc-800">
-          {title}
-        </h2>
-        <h2 className="text-base tracking-tight text-zinc-600">
-          {organization} ∙ {location}
-        </h2>
+        <div className="flex">
+          <Image
+            src={`/${image}`}
+            alt={title}
+            width="48"
+            height="48"
+            loading="lazy"
+            className="rounded-md"
+          />
+          <div className="flex flex-col ml-3">
+            <h2 className="text-base font-semibold tracking-tight text-zinc-800">
+              {title}
+            </h2>
+            <h2 className="text-base tracking-tight text-zinc-700">
+              {organization}
+            </h2>
+          </div>
+        </div>
         <p className="relative z-10 mt-2 text-sm text-zinc-600">
           {description}
         </p>
       </motion.div>
-      <p className="relative flex items-center order-first z-10 mb-3 mt-1 font-semibold text-sm text-zinc-800 md:block">
-        {date}
-      </p>
     </li>
   );
 };
 
-export default Experience;
+export default ExperienceComponent;

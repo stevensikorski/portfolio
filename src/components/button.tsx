@@ -10,7 +10,7 @@ type ButtonProperties = {
   text: string;
 };
 
-const Button: React.FC<ButtonProperties> = ({ href, icon, text }) => {
+const ButtonComponent: React.FC<ButtonProperties> = ({ href, icon, text }) => {
   return (
     <motion.div
       whileHover={{
@@ -29,4 +29,4 @@ const Button: React.FC<ButtonProperties> = ({ href, icon, text }) => {
   );
 };
 
-export default Button;
+export default ButtonComponent;

@@ -80,16 +80,16 @@ export const experiences = [
     title: "Software Engineering",
     description:
       "Over the course of months, I collaborated closely with three Polish Cultural Club board members, gathering their ideas and requirements, to develop a website, resulting in a substantial improvement in the club's online presence and providing a platform for organizing, promoting, and increasing club engagement.",
+    image: "PolishCulturalClub.png",
     organization: "Polish Cultural Club",
-    location: "New York, NY",
     date: "Dec. 2023 - Present",
   },
   {
     title: "Web Development",
     description:
       "Led the development of the STEMKasa chat messaging platform, connecting students with AI tutors, while collaborating with a team of 8 interns to enhance the STEMKasa learning platform.",
+    image: "STEMKasa.png",
     organization: "STEMKasa Learning Center",
-    location: "New York, NY",
     date: "Jun. 2023 - Aug. 2023",
   },
 ] as const;

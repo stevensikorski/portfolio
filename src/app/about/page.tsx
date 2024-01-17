@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
-import Brief from "@/components/brief";
-import Button from "@/components/button";
+import BriefComponent from "@/components/brief";
+import ButtonComponent from "@/components/button";
 import { socials } from "@/lib/data";
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
       animate={{ opacity: 1, x: 0, transition: { duration: 0 } }}
       className="mx-auto my-16 sm:my-48 mb-16 sm:mb-0 max-w-2xl lg:max-w-3xl motion-duration"
     >
-      <Brief
+      <BriefComponent
         heading={
           <>
             Hi, my name is{" "}
@@ -46,22 +46,22 @@ export default function AboutPage() {
           </>
         }
       />
-      <div className="mx-6 sm:mx-0 h-px bg-zinc-300" />
+      <div className="mx-6 sm:mx-0 h-px bg-slate-300" />
       <p className="mx-6 sm:mx-0 mt-6 text-base text-zinc-700">
         Feel free to reach out to me with any inquiries or collaboration
         possibilities. I&apos;m eager to meet new people and make connections!
       </p>
       <div className="flex justify-evenly sm:justify-start mx-6 sm:mx-0 gap-0 sm:gap-4 mt-6">
-        <Button
+        <ButtonComponent
           href={socials.linkedin}
           icon={<FaLinkedinIn className="h-4 w-4" />}
           text="LinkedIn"
-        ></Button>
-        <Button
+        ></ButtonComponent>
+        <ButtonComponent
           href={socials.github}
           icon={<FaGithub className="h-5 w-5" />}
           text="GitHub"
-        ></Button>
+        ></ButtonComponent>
       </div>
     </motion.main>
   );

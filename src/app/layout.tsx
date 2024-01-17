@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { GeistSans } from "geist/font/sans";
-import Background from "@/components/background";
-import Header from "@/components/header";
+import BackgroundComponent from "@/components/background";
+import HeaderComponent from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Steven Sikorski",
@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.className} bg-white overflow-x-hidden`}>
-        <Background />
-        <Header />
+        <BackgroundComponent />
+        <HeaderComponent />
         {children}
       </body>
     </html>

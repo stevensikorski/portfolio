@@ -1,4 +1,4 @@
-export default function Background() {
+export default function BackgroundComponent() {
   return (
     <div className="overflow-x-clip relative">
       <div className="bg-[#e7edf6] absolute top-[-6rem] -z-10 right-[-4rem] h-[24.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem]"></div>

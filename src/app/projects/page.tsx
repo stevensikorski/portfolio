@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 
-import Brief from "@/components/brief";
-import Project from "@/components/project";
+import BriefComponent from "@/components/brief";
+import ProjectComponent from "@/components/project";
 import { projects } from "@/lib/data";
 
 export default function ProjectsPage() {
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       className="mx-auto my-16 sm:my-20 sm:mb-0 max-w-2xl lg:max-w-5xl motion-duration"
     >
       <div className="mx-auto max-w-2xl lg:max-w-3xl">
-        <Brief
+        <BriefComponent
           heading={
             <>
               Portfolio showcasing the{" "}
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
           className="w-full grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project, index) => (
-            <Project
+            <ProjectComponent
               key={index}
               name={project.name}
               description={project.description}

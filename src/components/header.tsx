@@ -11,7 +11,7 @@ import { MdMenu, MdClose } from "react-icons/md";
 
 import { links } from "@/lib/data";
 
-export default function Header() {
+export default function HeaderComponent() {
   const path = usePathname().substring(1) || "home";
 
   const [mobileHeader, setMobileHeader] = useState(false);

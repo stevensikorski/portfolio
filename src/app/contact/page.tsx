@@ -7,7 +7,7 @@ import Link from "next/link";
 import ReCAPTCHA from "react-google-recaptcha";
 import { FaPaperPlane } from "react-icons/fa";
 
-import Brief from "@/components/brief";
+import BriefComponent from "@/components/brief";
 import { sendEmail } from "@/email/email";
 
 export default function ContactPage() {
@@ -34,7 +34,7 @@ export default function ContactPage() {
       animate={{ opacity: 1, x: 0, transition: { duration: 0 } }}
       className="mx-auto my-16 sm:my-20 max-w-2xl lg:max-w-3xl motion-duration"
     >
-      <Brief
+      <BriefComponent
         heading={
           <>
             Feel free to <span className="text-blue-700">contact</span> me.

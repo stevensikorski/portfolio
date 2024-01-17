@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 
-import Brief from "@/components/brief";
-import Experience from "@/components/experience";
+import BriefComponent from "@/components/brief";
+import ExperienceComponent from "@/components/experience";
 import { experiences } from "@/lib/data";
 
 export default function ExperiencePage() {
@@ -13,7 +13,7 @@ export default function ExperiencePage() {
       animate={{ opacity: 1, x: 0, transition: { duration: 0 } }}
       className="mx-auto my-16 sm:my-20 max-w-2xl lg:max-w-3xl motion-duration"
     >
-      <Brief
+      <BriefComponent
         heading={
           <>
             Highlighting the impactful{" "}
@@ -28,14 +28,14 @@ export default function ExperiencePage() {
         }
       />
       <div className="mt-12 sm:mt-20 mx-6 sm:mx-auto md:border-l md:border-zinc-300 md:pl-6">
-        <ul className="flex flex-col space-y-16 max-w-3xl">
+        <ul className="space-y-10 max-w-3xl">
           {experiences.map((experience, index) => (
-            <Experience
+            <ExperienceComponent
               key={index}
               title={experience.title}
               description={experience.description}
+              image={experience.image}
               organization={experience.organization}
-              location={experience.location}
               date={experience.date}
             />
           ))}
