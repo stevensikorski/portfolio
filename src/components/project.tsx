@@ -37,12 +37,12 @@ const ProjectComponent: React.FC<ProjectProperties> = ({
         <Image
           src={`/${image}`}
           alt={name}
-          width="40"
-          height="40"
+          width="48"
+          height="48"
           loading="lazy"
           className="rounded-md"
         />
-        <h2 className="mt-6 text-base font-semibold text-zinc-800">{name}</h2>
+        <h2 className="mt-4 text-base font-semibold text-zinc-800">{name}</h2>
         <p className="relative mt-2 text-sm text-zinc-700">{description}</p>
         <p className="relative mt-6 flex items-center text-zinc-400 text-sm font-medium transition duration-[250] sm:group-hover:text-blue-700">
           <FaLink className="w-4 h-4" />
