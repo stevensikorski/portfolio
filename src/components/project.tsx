@@ -37,8 +37,8 @@ const ProjectComponent: React.FC<ProjectProperties> = ({
         <Image
           src={`/${image}`}
           alt={name}
-          width="48"
-          height="48"
+          width="32"
+          height="32"
           loading="lazy"
           className="rounded-md"
         />
