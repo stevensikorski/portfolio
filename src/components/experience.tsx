@@ -21,7 +21,7 @@ const ExperienceComponent: React.FC<ExperienceProperties> = ({
 }) => {
   return (
     <li className="md:grid md:grid-cols-4">
-      <p className="relative flex items-start z-10 mt-5 mb-3 text-sm text-zinc-400">
+      <p className="relative flex items-start z-10 mt-5 mb-3 text-sm text-zinc-600">
         {date}
       </p>
       <motion.div

@@ -46,7 +46,7 @@ export default function AboutPage() {
           </>
         }
       />
-      <div className="mx-6 sm:mx-0 h-px bg-slate-300" />
+      <div className="mx-6 sm:mx-0 h-px bg-zinc-300" />
       <p className="mx-6 sm:mx-0 mt-6 text-base text-zinc-700">
         Feel free to reach out to me with any inquiries or collaboration
         possibilities. I&apos;m eager to meet new people and make connections!
