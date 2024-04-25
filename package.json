@@ -12,6 +12,7 @@
     "@react-email/components": "^0.0.12",
     "@react-email/tailwind": "^0.0.13",
     "@types/react-google-recaptcha": "^2.1.8",
+    "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.5",
     "clsx": "^2.1.0",
     "follow-redirects": "^1.15.6",

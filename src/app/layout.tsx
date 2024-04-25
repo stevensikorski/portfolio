@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import { GeistSans } from "geist/font/sans";
 import BackgroundComponent from "@/components/background";
@@ -22,6 +23,7 @@ export default function RootLayout({
         <BackgroundComponent />
         <HeaderComponent />
         {children}
+        <Analytics />
       </body>
     </html>
   );
