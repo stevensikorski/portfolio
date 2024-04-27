@@ -43,11 +43,8 @@ export default function ContactPage() {
         paragraph={
           <>
             Please contact me directly at&nbsp;
-            <Link
-              className="underline"
-              href="mailto:contact@stevensikorski.com"
-            >
-              contact@stevensikorski.com
+            <Link className="underline" href="mailto:steven@stevensikorski.com">
+              steven@stevensikorski.com
             </Link>
             &nbsp;or through this form. <br></br>
             <br></br>
