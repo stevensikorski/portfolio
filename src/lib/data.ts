@@ -28,6 +28,14 @@ export const links = [
 
 export const projects = [
   {
+    name: "PitWall",
+    description:
+      "Live session updates and insights for FORMULA 1 through an AI chatbot.",
+    image: "PitWall.png",
+    url: "https://pitwall.stevensikorski.com/",
+    link: "pitwall.stevensikorski.com",
+  },
+  {
     name: "Polish Cultural Club",
     description:
       "Currently involved in developing the website for the Polish Cultural Club.",
@@ -43,6 +51,13 @@ export const projects = [
     link: "github.com/stevensikorski",
   },
   {
+    name: "ASLearn",
+    description: "Hackathon project made with a team of four for HackNYU 2022.",
+    image: "ASLearn.png",
+    url: "https://arshs1.github.io/ASLearn/",
+    link: "github.io/ASLearn",
+  },
+  {
     name: "Password Generator",
     description:
       "Desktop application for password generation. Purpose-built for macOS.",
@@ -51,26 +66,11 @@ export const projects = [
     link: "github.com/stevensikorski",
   },
   {
-    name: "ASLearn",
-    description: "Hackathon project made with a team of four for HackNYU 2022.",
-    image: "ASLearn.png",
-    url: "https://arshs1.github.io/ASLearn/",
-    link: "github.io/ASLearn",
-  },
-  {
     name: "Monte Carlo Algorithm",
     description:
       "Estimation of the irrational number pi by utilizing the Monte Carlo Algorithm.",
     image: "EstimatePi.png",
     url: "https://github.com/stevensikorski/estimate-pi",
-    link: "github.com/stevensikorski",
-  },
-  {
-    name: "macos-system-info",
-    description:
-      "Application to monitor system information on macOS based systems.",
-    image: "SystemInfo.png",
-    url: "https://github.com/stevensikorski/macos-system-info",
     link: "github.com/stevensikorski",
   },
 ] as const;
