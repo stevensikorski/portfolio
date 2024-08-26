@@ -77,7 +77,7 @@ export const projects = [
 
 export const experiences = [
   {
-    title: "Software Engineering",
+    title: "Technical Lead",
     description:
       "Over the course of months, I collaborated closely with three Polish Cultural Club board members, gathering their ideas and requirements, to develop a website, resulting in a substantial improvement in the club's online presence and providing a platform for organizing, promoting, and increasing club engagement.",
     image: "PolishCulturalClub.png",
