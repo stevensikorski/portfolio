@@ -82,7 +82,7 @@ export const experiences = [
       "Over the course of months, I collaborated closely with three Polish Cultural Club board members, gathering their ideas and requirements, to develop a website, resulting in a substantial improvement in the club's online presence and providing a platform for organizing, promoting, and increasing club engagement.",
     image: "PolishCulturalClub.png",
     organization: "Polish Cultural Club",
-    date: "Dec. 2023 - Present",
+    date: "Dec. 2023 - Sep. 2024",
   },
   {
     title: "Web Development",
