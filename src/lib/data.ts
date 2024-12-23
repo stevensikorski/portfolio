@@ -28,6 +28,14 @@ export const links = [
 
 export const projects = [
   {
+    name: "ParkingSpot",
+    description:
+      "ParkingSpot simplifies parking with computer vision and machine learning.",
+    image: "ParkingSpot.png",
+    url: "https://github.com/stevensikorski/ParkingSpot/",
+    link: "github.com/stevensikorski",
+  },
+  {
     name: "PitWall",
     description:
       "Live session updates and insights for FORMULA 1 through an AI chatbot.",
@@ -44,6 +52,14 @@ export const projects = [
     link: "hcpolishclub.org",
   },
   {
+    name: "Password Generator",
+    description:
+      "Desktop application for password generation. Purpose-built for macOS.",
+    image: "PasswordGenerator.png",
+    url: "https://github.com/stevensikorski/password-generator",
+    link: "github.com/stevensikorski",
+  },
+  {
     name: "Maze Solver",
     description: "Navigation program for mazes using depth first search.",
     image: "MazeSolver.png",
@@ -56,22 +72,6 @@ export const projects = [
     image: "ASLearn.png",
     url: "https://arshs1.github.io/ASLearn/",
     link: "github.io/ASLearn",
-  },
-  {
-    name: "Password Generator",
-    description:
-      "Desktop application for password generation. Purpose-built for macOS.",
-    image: "PasswordGenerator.png",
-    url: "https://github.com/stevensikorski/password-generator",
-    link: "github.com/stevensikorski",
-  },
-  {
-    name: "Monte Carlo Algorithm",
-    description:
-      "Estimation of the irrational number pi by utilizing the Monte Carlo Algorithm.",
-    image: "EstimatePi.png",
-    url: "https://github.com/stevensikorski/estimate-pi",
-    link: "github.com/stevensikorski",
   },
 ] as const;
 
