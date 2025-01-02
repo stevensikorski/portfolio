@@ -30,7 +30,7 @@ export const projects = [
   {
     name: "ParkingSpot",
     description:
-      "ParkingSpot simplifies parking with computer vision and machine learning.",
+      "Simplify street parking with computer vision and machine learning.",
     image: "ParkingSpot.png",
     url: "https://github.com/stevensikorski/ParkingSpot/",
     link: "github.com/stevensikorski",
