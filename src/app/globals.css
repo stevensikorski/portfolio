@@ -8,20 +8,9 @@
     @apply text-black font-medium tracking-tight text-center;
   }
   a {
-    @apply text-black font-medium tracking-tight text-center relative inline-block;
+    @apply text-black font-medium tracking-tight text-center relative inline-block hover:opacity-50 transform duration-200;
   }
   span {
     @apply text-black font-medium tracking-tight text-center select-none;
-  }
-}
-
-@layer components {
-  a::after {
-    content: "";
-    @apply absolute left-0 bottom-0 w-full h-0.5 bg-current opacity-0 scale-x-0 origin-left transition-all duration-300;
-  }
-
-  a:hover::after {
-    @apply opacity-100 scale-x-100;
   }
 }
