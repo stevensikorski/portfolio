@@ -1,28 +1,37 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
 
 import { GeistSans } from "geist/font/sans";
-import BackgroundComponent from "@/components/background";
-import HeaderComponent from "@/components/header";
+import { Analytics } from "@vercel/analytics/react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Steven Sikorski",
-  description:
-    "Undergraduate student in Computer Science, seeking opportunities in Software Engineering.",
+  description: "Software Engineer",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/favicon-dark.png",
+        href: "/favicon-dark.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/favicon-light.png",
+        href: "/favicon-light.png",
+      },
+    ],
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} bg-white overflow-x-hidden`}>
-        <BackgroundComponent />
-        <HeaderComponent />
+      <body className={`${GeistSans.className} h-screen w-screen overflow-hidden bg-white`}>
+        <Header />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

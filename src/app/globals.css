@@ -1,38 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
+@layer base {
+  h1 {
+    @apply text-black text-4xl font-bold tracking-tight text-center;
   }
-  10% {
-    transform: rotate(14deg);
+  p {
+    @apply text-black font-medium tracking-tight text-center;
   }
-  20% {
-    transform: rotate(-8deg);
+  a {
+    @apply text-black font-medium tracking-tight text-center relative inline-block;
   }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  span {
+    @apply text-black font-medium tracking-tight text-center select-none;
   }
 }
 
-.animate-wave {
-  animation: wave 3s infinite;
-}
+@layer components {
+  a::after {
+    content: "";
+    @apply absolute left-0 bottom-0 w-full h-0.5 bg-current opacity-0 scale-x-0 origin-left transition-all duration-300;
+  }
 
-.motion-duration {
-  transition: all 0.25s;
+  a:hover::after {
+    @apply opacity-100 scale-x-100;
+  }
 }
